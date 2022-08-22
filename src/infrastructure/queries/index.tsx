@@ -3,6 +3,7 @@ import { gql } from "@apollo/client";
 export const GET_LAUNCHES = gql`
   query getLaunches {
     launchesPast {
+      id
       mission_name
       launch_success
       launch_date_local
@@ -12,7 +13,6 @@ export const GET_LAUNCHES = gql`
       rocket {
         rocket_name
       }
-      id
     }
   }
 `;
@@ -20,13 +20,14 @@ export const GET_LAUNCHES = gql`
 export const GET_LAUNCH = gql`
   query getLaunch($id: ID!) {
     launch(id: $id) {
-      details
       id
+      mission_name
+      details
+      launch_success
+      launch_date_local
       launch_site {
         site_name_long
       }
-      launch_success
-      mission_name
       rocket {
         rocket_name
       }

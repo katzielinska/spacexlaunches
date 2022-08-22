@@ -4,6 +4,7 @@ export type Launch = {
   launch_site: {
     site_name_long: string;
   };
+  launch_date_local: string;
   launch_success: boolean;
   mission_name: string;
   rocket: {
@@ -12,7 +13,6 @@ export type Launch = {
   links: {
     flickr_images: string[];
   };
-  launch_date_local: string;
 };
 
 export type LaunchQuery = {

@@ -33,7 +33,7 @@ const LaunchDetails: React.FC = () => {
         ))}
       </Text>
     );
-
+  console.log(data?.launch);
   return (
     <Box py="10">
       <ChakraLink as={Link} to="/" mb="6" display="block">
@@ -44,7 +44,7 @@ const LaunchDetails: React.FC = () => {
           <Skeleton isLoaded={!isLaunchLoading}>
             {data?.launch.links.flickr_images[0] && (
               <Image
-                src={data?.launch.links.flickr_images[0]}
+                src={data.launch.links.flickr_images[0]}
                 width="full"
                 objectFit="cover"
                 objectPosition="center"
