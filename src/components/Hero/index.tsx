@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
 
   return (
     <Box py="10">
-      <Heading as="h1" size={["xl", "2xl"]} pb="4" color="gray.100">
+      <Heading as="h1" size="2xl" pb="4" color="gray.100">
         SpaceX rocket launches{" "}
         <span role="img" aria-label="rocket and sparkle emojis">
           🚀 ✨
