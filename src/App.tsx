@@ -1,13 +1,9 @@
-import React from "react";
-import { Box, ChakraProvider } from "@chakra-ui/react";
-import { Container } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import LaunchList from "./components/LaunchList";
-import Hero from "./components/Hero";
 import theme from "../src/theme";
 import Fonts from "../src/theme/Fonts";
 import { Route, Routes } from "react-router-dom";
 import LaunchDetails from "./components/LaunchDetails";
-import Home from "./components/Layout";
 import Layout from "./components/Layout";
 
 function App() {

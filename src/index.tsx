@@ -3,7 +3,7 @@ import { ApolloProvider } from "@apollo/client";
 import { StrictMode } from "react";
 import { apollo } from "./infrastructure/apollo";
 import App from "./App";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 root.render(
