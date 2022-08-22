@@ -5,17 +5,21 @@ import LaunchList from "./components/LaunchList";
 import Hero from "./components/Hero";
 import theme from "../src/theme";
 import Fonts from "../src/theme/Fonts";
+import { Route, Routes } from "react-router-dom";
+import LaunchDetails from "./components/LaunchDetails";
+import Home from "./components/Layout";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />
-      <Box bg="grayDark">
-        <Container color="gray.400">
-          <Hero />
-          <LaunchList />
-        </Container>
-      </Box>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<LaunchList />} />
+          <Route path="/:launchId" element={<LaunchDetails />} />
+        </Routes>
+      </Layout>
     </ChakraProvider>
   );
 }
